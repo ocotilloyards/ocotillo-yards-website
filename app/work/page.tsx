@@ -4,28 +4,59 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Ocotillo Yards proof gallery. Slots are labeled AI Concept, Completed by Featured Provider, and Founding Project—In Progress. Empty until real assets land.",
+    "Ocotillo Yards proof gallery. Three AI Concept yard visualizations for Chandler / Ocotillo Lakes, plus empty slots for completed featured work and founding projects.",
 };
 
 type Slot = {
+  id: string;
   label: "AI Concept" | "Completed by Featured Provider" | "Founding Project—In Progress";
-  /** Public path, e.g. /work/ai-concept.jpg. Leave unset for an empty frame. */
   src?: string;
   alt?: string;
+  title: string;
   caption: string;
 };
 
 const slots: Slot[] = [
   {
+    id: "concept-lake",
     label: "AI Concept",
-    caption: "Empty until we have a two-view AI study a homeowner has agreed to show. Never a stand-in photo.",
+    src: "/work/ai-concept-lake-lot.png",
+    alt: "AI Concept of an Ocotillo Lakes dusk backyard facing the lake, with desert planting and uplighting. Not a completed job.",
+    title: "Lake-lot backyard, late light",
+    caption: "Two-view study of a lake-edge lot. Generated visualization, not a photograph of finished work.",
   },
   {
+    id: "concept-front",
+    label: "AI Concept",
+    src: "/work/ai-concept-front-xeri.png",
+    alt: "AI Concept of a Chandler front xeriscape with palo verde, boulders, and decomposed granite. Not a completed job.",
+    title: "Front xeriscape, morning sun",
+    caption: "Street-side desert planting with no lawn. Generated visualization, not a contractor portfolio shot.",
+  },
+  {
+    id: "concept-pool",
+    label: "AI Concept",
+    src: "/work/ai-concept-pool-deck.png",
+    alt: "AI Concept of a Chandler pool deck with desert planters and late-afternoon light. Not a completed job.",
+    title: "Pool deck and desert beds",
+    caption: "Cool-deck and planting idea around an existing pool. Generated visualization, not a completed install.",
+  },
+  {
+    id: "completed-a",
     label: "Completed by Featured Provider",
-    caption: "Empty until a licensed partner finishes a job we introduced and gives written permission to show it.",
+    title: "Waiting on a licensed partner",
+    caption: "Empty until a featured crew finishes a job we introduced and gives written permission to show it.",
   },
   {
+    id: "completed-b",
+    label: "Completed by Featured Provider",
+    title: "Waiting on a licensed partner",
+    caption: "A second completion slot. Stays empty until we have a real yes and a permitted photo.",
+  },
+  {
+    id: "founding",
     label: "Founding Project—In Progress",
+    title: "No founding project posted yet",
     caption: "Empty until the first homeowner + licensed crew pairing is underway and we have permission to document it.",
   },
 ];
@@ -34,8 +65,13 @@ function Frame({ slot }: { slot: Slot }) {
   return (
     <article className="stone-card flex flex-col overflow-hidden rounded-2xl">
       {slot.src ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img src={slot.src} alt={slot.alt ?? slot.label} className="aspect-[4/3] w-full object-cover" />
+        <div className="relative">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={slot.src} alt={slot.alt ?? slot.label} className="aspect-[4/3] w-full object-cover" />
+          <p className="absolute left-3 top-3 rounded-full bg-dusk/75 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-gold backdrop-blur-sm">
+            AI Concept
+          </p>
+        </div>
       ) : (
         <div
           className="flex aspect-[4/3] w-full items-center justify-center border-b border-stone/40 bg-sand/40"
@@ -48,7 +84,8 @@ function Frame({ slot }: { slot: Slot }) {
         <p className="self-start rounded-full bg-sand px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-dusk">
           {slot.label}
         </p>
-        <p className="mt-3 text-sm leading-relaxed text-muted">{slot.caption}</p>
+        <h2 className="mt-3 font-display text-xl text-dusk">{slot.title}</h2>
+        <p className="mt-2 text-sm leading-relaxed text-muted">{slot.caption}</p>
       </div>
     </article>
   );
@@ -60,12 +97,12 @@ export default function WorkPage() {
       <p className="wordmark-yards text-adobe">Proof</p>
       <h1 className="mt-3 font-display text-4xl text-dusk sm:text-5xl">Work, labeled.</h1>
       <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted">
-        Three slots, waiting on real assets. No fake photos. No invented reviews. Street and phone stay off this
-        page. A contractor license number appears only with a completed featured job, never as a placeholder.
+        Three AI Concept yards for Chandler / Ocotillo Lakes. Completed-provider and founding-project slots stay empty
+        until a licensed partner says yes. No fake testimonials. Street and phone stay off this page.
       </p>
       <div className="mt-12 grid gap-6 md:grid-cols-3">
         {slots.map((slot) => (
-          <Frame key={slot.label} slot={slot} />
+          <Frame key={slot.id} slot={slot} />
         ))}
       </div>
       <Link
