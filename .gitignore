@@ -1,0 +1,16 @@
+node_modules
+.next
+out
+build
+dist
+.env
+.env.*
+secrets
+*.pem
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+.vercel
+.turbo
+npm-debug.log*
+bun-debug.log*

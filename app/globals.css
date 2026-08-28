@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #f6f0e4;
+  --paper: #fbf7ef;
+  --sand: #e6d5b8;
+  --stone: #c9b08a;
+  --adobe: #c56a45;
+  --ocotillo: #c94a2c;
+  --bloom: #e07a4a;
+  --palo: #b7c85a;
+  --creosote: #3f5338;
+  --dusk: #1c2a26;
+  --lake: #3e6e6c;
+  --water: #7ba8a4;
+  --gold: #e0a045;
+  --ink: #1e1914;
+  --muted: #5c5348;
+}
+
+@theme inline {
+  --color-cream: var(--cream);
+  --color-paper: var(--paper);
+  --color-sand: var(--sand);
+  --color-stone: var(--stone);
+  --color-adobe: var(--adobe);
+  --color-ocotillo: var(--ocotillo);
+  --color-bloom: var(--bloom);
+  --color-palo: var(--palo);
+  --color-creosote: var(--creosote);
+  --color-dusk: var(--dusk);
+  --color-lake: var(--lake);
+  --color-water: var(--water);
+  --color-gold: var(--gold);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-sans: var(--font-source), ui-sans-serif, system-ui, sans-serif;
+}
+
+html,
+body {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background: var(--palo);
+  color: var(--dusk);
+}
+
+.wordmark-oco {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 520;
+  letter-spacing: -0.02em;
+}
+
+.wordmark-yards {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.66em;
+}
+
+.late-light {
+  background:
+    linear-gradient(180deg, #f3c98a 0%, #e8b072 18%, #d98962 42%, #7a6e62 62%, #3e6e6c 78%, #1c2a26 100%);
+}
+
+.stone-card {
+  background: var(--paper);
+  border: 1px solid color-mix(in srgb, var(--stone) 70%, transparent);
+  box-shadow: 0 1px 0 color-mix(in srgb, white 60%, transparent) inset;
+}
