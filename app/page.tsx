@@ -1,5 +1,5 @@
+import Image from "next/image";
 import Link from "next/link";
-import { DesertScene } from "@/components/DesertScene";
 
 const steps = [
   {
@@ -22,12 +22,29 @@ const steps = [
 export default function HomePage() {
   return (
     <>
-      <section className="relative overflow-hidden">
-        <DesertScene className="h-[min(78vh,620px)] w-full" />
-        <div className="absolute inset-0 bg-gradient-to-t from-dusk via-dusk/25 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 mx-auto max-w-6xl px-4 pb-10 sm:px-6 sm:pb-14">
-          <p className="wordmark-yards text-gold">Chandler · Ocotillo Lakes</p>
-          <h1 className="mt-3 max-w-2xl text-4xl leading-tight text-paper sm:text-5xl">
+      <section className="relative min-h-[min(88vh,760px)] overflow-hidden">
+        <Image
+          src="/hero-backdrop.png"
+          alt="AI Concept of an Ocotillo Lakes dusk yard with lake light and desert planting. Not a completed project."
+          fill
+          priority
+          className="object-cover object-[center_40%]"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-dusk via-dusk/55 to-dusk/15" />
+        <div className="relative z-10 mx-auto flex min-h-[min(88vh,760px)] max-w-6xl flex-col justify-end px-4 pb-10 pt-16 sm:px-6 sm:pb-14">
+          <p className="self-start rounded-full bg-dusk/55 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-gold backdrop-blur-sm">
+            AI Concept
+          </p>
+          <Image
+            src="/title-wordmark.png"
+            alt="Ocotillo Yards"
+            width={720}
+            height={280}
+            priority
+            className="mt-5 h-auto w-[min(100%,34rem)] drop-shadow-[0_12px_40px_rgba(28,42,38,0.55)]"
+          />
+          <h1 className="mt-5 max-w-2xl font-display text-4xl leading-tight text-paper sm:text-5xl">
             See the yard before you hire the crew.
           </h1>
           <p className="mt-4 max-w-xl text-base leading-relaxed text-sand sm:text-lg">
@@ -48,6 +65,9 @@ export default function HomePage() {
               Licensed crews apply
             </Link>
           </div>
+          <p className="mt-4 text-[11px] uppercase tracking-[0.14em] text-sand/80">
+            Hero photograph is an AI Concept, not a finished job.
+          </p>
         </div>
       </section>
 
@@ -98,7 +118,8 @@ export default function HomePage() {
         <h2 className="mt-2 text-3xl text-dusk">Labeled honestly. No invented reviews.</h2>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">
           Portfolio items use three labels only: AI Concept, Completed by Featured Provider, and Founding
-          Project—In Progress. We do not publish fake testimonials.
+          Project—In Progress. We do not publish fake testimonials. Generated yard images stay on this homepage
+          as AI Concept, not as completed work.
         </p>
         <Link
           href="/work"
