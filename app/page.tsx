@@ -42,10 +42,10 @@ export default function HomePage() {
               Request a free concept
             </Link>
             <Link
-              href="/how-it-works"
+              href="/contact?intent=crew"
               className="rounded-full border border-sand/40 bg-dusk/40 px-5 py-2.5 text-sm text-paper backdrop-blur-sm hover:border-gold"
             >
-              How it works
+              Licensed crews apply
             </Link>
           </div>
         </div>

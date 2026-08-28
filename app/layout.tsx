@@ -25,7 +25,6 @@ export const metadata: Metadata = {
   },
   description:
     "Visualization and referral for Chandler’s Ocotillo Lakes. Free two-view AI backyard, roof, and landscape concepts plus a one-page idea board, then an introduction to a licensed local crew. Not a licensed contractor.",
-  metadataBase: new URL("https://github.com/ocotilloyards/ocotillo-yards-website"),
   icons: { icon: "/favicon.svg" },
   openGraph: {
     title: "Ocotillo Yards",

@@ -24,6 +24,7 @@ const steps = [
 
 const notUs = [
   "Construction or construction management",
+  "Construction plans or engineered drawings",
   "Construction quotes or allowances",
   "HOA or Design Review Board filing",
   "Crew scheduling",
