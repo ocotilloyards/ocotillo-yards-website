@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useState } from "react";
 
 const EMAIL = "ocotilloyardsaz@gmail.com";
 
@@ -8,6 +8,11 @@ type Intent = "concept" | "crew";
 
 export function ContactForm({ defaultIntent = "concept" }: { defaultIntent?: Intent }) {
   const [intent, setIntent] = useState<Intent>(defaultIntent);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("intent") === "crew") setIntent("crew");
+  }, []);
   const [name, setName] = useState("");
   const [fromEmail, setFromEmail] = useState("");
   const [focus, setFocus] = useState("Backyard");
