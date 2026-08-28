@@ -6,14 +6,7 @@ export const metadata: Metadata = {
   description: "Request a free two-view AI concept from Ocotillo Yards, or apply as a licensed Arizona crew with your ROC number. Email ocotilloyardsaz@gmail.com.",
 };
 
-export default async function ContactPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ intent?: string }>;
-}) {
-  const sp = await searchParams;
-  const defaultIntent = sp.intent === "crew" ? "crew" : "concept";
-
+export default function ContactPage() {
   return (
     <article className="mx-auto max-w-xl px-4 py-14 sm:px-6 sm:py-20">
       <p className="wordmark-yards text-adobe">Contact</p>
@@ -23,7 +16,7 @@ export default async function ContactPage({
         Use the form to open a message, or write us directly. Licensed crews: include your ROC number.
       </p>
       <div className="mt-10">
-        <ContactForm defaultIntent={defaultIntent} />
+        <ContactForm />
       </div>
     </article>
   );
