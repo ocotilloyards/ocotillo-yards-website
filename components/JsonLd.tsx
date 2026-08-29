@@ -6,7 +6,7 @@ export function JsonLd() {
     "@type": "ProfessionalService",
     name: "Ocotillo Yards",
     description:
-      "Visualization and referral service in Chandler, Arizona. Free two-view AI backyard, roof, and landscape concepts plus a one-page idea board, then an introduction to a licensed local crew. Not a licensed contractor.",
+      "Visualization and referral service in Chandler, Arizona. Free two-view AI concepts for landscape, hardscape, and LED lighting, plus a one-page idea board, then an introduction to a licensed local crew. Not a licensed contractor.",
     email: EMAIL,
     areaServed: {
       "@type": "Place",
@@ -19,6 +19,8 @@ export function JsonLd() {
     },
     knowsAbout: [
       "AI landscape visualization",
+      "hardscape visualization",
+      "LED landscape lighting visualization",
       "Ocotillo Community Association Design Review Board",
       "licensed contractor referral",
     ],

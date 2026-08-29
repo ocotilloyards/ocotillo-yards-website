@@ -1,84 +1,110 @@
 @import "tailwindcss";
 
 :root {
-  --cream: #f6f0e4;
-  --paper: #fbf7ef;
-  --sand: #e6d5b8;
-  --stone: #c9b08a;
-  --adobe: #c56a45;
-  --ocotillo: #c94a2c;
-  --bloom: #e07a4a;
-  --palo: #b7c85a;
-  --creosote: #3f5338;
-  --dusk: #1c2a26;
-  --lake: #3e6e6c;
-  --water: #7ba8a4;
-  --gold: #e0a045;
-  --ink: #1e1914;
-  --muted: #5c5348;
+  --void: #08090a;
+  --void-2: #111315;
+  --bone: #f3eee4;
+  --ash: #b7a894;
+  --ember: #c45c2c;
+  --lake: #3d6a66;
 }
 
 @theme inline {
-  --color-cream: var(--cream);
-  --color-paper: var(--paper);
-  --color-sand: var(--sand);
-  --color-stone: var(--stone);
-  --color-adobe: var(--adobe);
-  --color-ocotillo: var(--ocotillo);
-  --color-bloom: var(--bloom);
-  --color-palo: var(--palo);
-  --color-creosote: var(--creosote);
-  --color-dusk: var(--dusk);
+  --color-void: var(--void);
+  --color-void-2: var(--void-2);
+  --color-bone: var(--bone);
+  --color-ash: var(--ash);
+  --color-ember: var(--ember);
   --color-lake: var(--lake);
-  --color-water: var(--water);
-  --color-gold: var(--gold);
-  --color-ink: var(--ink);
-  --color-muted: var(--muted);
-  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
-  --font-sans: var(--font-source), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-cormorant), ui-serif, Georgia, serif;
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  --font-caps: var(--font-barlow), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  color-scheme: dark;
 }
 
 html,
 body {
-  background: var(--cream);
-  color: var(--ink);
+  background: var(--void);
+  color: var(--bone);
 }
 
 body {
   font-family: var(--font-sans);
+  font-weight: 400;
 }
 
-h1, h2, h3, .font-display {
+h1,
+h2,
+h3,
+.font-display {
   font-family: var(--font-display);
+  font-weight: 500;
 }
 
 ::selection {
-  background: var(--palo);
-  color: var(--dusk);
+  background: var(--ember);
+  color: var(--void);
+}
+
+:focus-visible {
+  outline: 1px solid var(--ember);
+  outline-offset: 3px;
+}
+
+.kicker {
+  font-family: var(--font-caps);
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  color: var(--ember);
 }
 
 .wordmark-oco {
   font-family: var(--font-display);
   font-style: italic;
-  font-weight: 520;
-  letter-spacing: -0.02em;
+  font-weight: 500;
+  letter-spacing: -0.03em;
 }
 
 .wordmark-yards {
-  font-family: var(--font-sans);
+  font-family: var(--font-caps);
   font-weight: 600;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
-  font-size: 0.66em;
+  font-size: 0.62em;
 }
 
-.late-light {
-  background:
-    linear-gradient(180deg, #f3c98a 0%, #e8b072 18%, #d98962 42%, #7a6e62 62%, #3e6e6c 78%, #1c2a26 100%);
+.hairline {
+  height: 1px;
+  width: 2.75rem;
+  background: var(--ember);
 }
 
-.stone-card {
-  background: var(--paper);
-  border: 1px solid color-mix(in srgb, var(--stone) 70%, transparent);
-  box-shadow: 0 1px 0 color-mix(in srgb, white 60%, transparent) inset;
+.veil-soft {
+  background: linear-gradient(
+    180deg,
+    rgb(8 9 10 / 0.28) 0%,
+    rgb(8 9 10 / 0.08) 38%,
+    rgb(8 9 10 / 0.55) 78%,
+    rgb(8 9 10 / 0.88) 100%
+  );
+}
+
+.veil-hard {
+  background: linear-gradient(
+    180deg,
+    rgb(8 9 10 / 0.45) 0%,
+    rgb(8 9 10 / 0.2) 40%,
+    rgb(8 9 10 / 0.78) 100%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

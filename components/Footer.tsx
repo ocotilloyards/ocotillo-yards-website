@@ -1,49 +1,55 @@
 import Link from "next/link";
+import { EMAIL, nav } from "@/lib/media";
 import { Wordmark } from "./Wordmark";
-
-const EMAIL = "ocotilloyardsaz@gmail.com";
 
 export function Footer() {
   return (
-    <footer className="bg-dusk text-paper">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr]">
+    <footer className="bg-void text-bone">
+      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 sm:px-8 md:grid-cols-[1.5fr_1fr_1fr]">
         <div>
-          <div className="[&_.wordmark-oco]:text-paper [&_.wordmark-yards]:text-bloom [&_svg]:text-palo">
-            <Wordmark />
-          </div>
-          <p className="mt-4 max-w-sm text-sm leading-relaxed text-sand">
-            Visualization and referral for Chandler&apos;s Ocotillo Lakes. Free two-view AI
-            concepts, then an intro to a licensed local crew.
+          <Wordmark />
+          <p className="mt-5 max-w-sm text-sm leading-relaxed text-ash">
+            Visualization and referral for Chandler&apos;s Ocotillo Lakes. Landscape, hardscape,
+            and LED lighting — then an intro to a licensed local crew.
           </p>
         </div>
         <div>
-          <p className="wordmark-yards text-stone">Visit</p>
-          <ul className="mt-3 space-y-2 text-sm">
-            <li><Link href="/how-it-works" className="hover:text-gold">How it works</Link></li>
-            <li><Link href="/homeowners" className="hover:text-gold">Homeowners</Link></li>
-            <li><Link href="/contractors" className="hover:text-gold">For contractors</Link></li>
-            <li><Link href="/work" className="hover:text-gold">Work</Link></li>
-            <li><Link href="/contact" className="hover:text-gold">Request a concept</Link></li>
+          <p className="kicker">Visit</p>
+          <ul className="mt-4 space-y-2 text-sm">
+            {nav.map((l) => (
+              <li key={l.href}>
+                <Link href={l.href} className="text-bone/85 hover:text-ember">
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <Link href="/contact" className="text-bone/85 hover:text-ember">
+                Request a concept
+              </Link>
+            </li>
           </ul>
         </div>
         <div>
-          <p className="wordmark-yards text-stone">Contact</p>
-          <p className="mt-3 text-sm">
-            <a href={`mailto:${EMAIL}`} className="hover:text-gold">{EMAIL}</a>
+          <p className="kicker">Contact</p>
+          <p className="mt-4 text-sm">
+            <a href={`mailto:${EMAIL}`} className="hover:text-ember">
+              {EMAIL}
+            </a>
           </p>
-          <p className="mt-2 text-sm text-sand">Chandler, Arizona · Ocotillo Lakes</p>
+          <p className="mt-2 text-sm text-ash">Chandler, Arizona · Ocotillo Lakes</p>
         </div>
       </div>
-      <div className="border-t border-creosote">
-        <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6">
-          <p className="text-xs leading-relaxed text-stone">
+      <div className="border-t border-bone/10">
+        <div className="mx-auto max-w-6xl px-5 py-6 sm:px-8">
+          <p className="text-xs leading-relaxed text-ash/80">
             Ocotillo Yards is a visualization and referral service, not a licensed contractor.
             Licensed partners perform construction. We do not perform construction, write plans,
-            file HOA packets, quote construction, schedule crews, or collect job payments.
-            Exterior changes in Ocotillo Lakes may require Ocotillo Community Association Design
-            Review Board approval; the homeowner and licensed contractor file.
+            file HOA packets, quote construction, schedule crews, collect job payments, or
+            install pools. Exterior changes in Ocotillo Lakes may require Ocotillo Community
+            Association Design Review Board approval; the homeowner and licensed contractor file.
           </p>
-          <p className="mt-3 text-xs text-stone/80">© {new Date().getFullYear()} Ocotillo Yards</p>
+          <p className="mt-3 text-xs text-ash/60">© {new Date().getFullYear()} Ocotillo Yards</p>
         </div>
       </div>
     </footer>

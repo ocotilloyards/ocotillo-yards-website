@@ -1,128 +1,187 @@
-import Link from "next/link";
+import { BeforeAfter } from "@/components/BeforeAfter";
+import { Cta } from "@/components/Cta";
+import { FilmStill } from "@/components/FilmStill";
+import { StillLink } from "@/components/StillLink";
 import { asset } from "@/lib/base-path";
-
-const steps = [
-  {
-    n: "01",
-    title: "Request a free concept",
-    body: "Tell us the lot and what you want to see. Attach a couple of photos in email. No site visit required to start.",
-  },
-  {
-    n: "02",
-    title: "Two views and an idea board",
-    body: "You get two AI views of the same idea plus a one-page board you can share with family or a contractor.",
-  },
-  {
-    n: "03",
-    title: "Meet a licensed crew",
-    body: "If you want to build, we introduce a featured Arizona-licensed provider. They quote, file, and construct. We do not.",
-  },
-];
+import { backyardPair, stills } from "@/lib/media";
 
 export default function HomePage() {
   return (
     <>
-      <section className="relative min-h-[min(88vh,760px)] overflow-hidden">
-        <img
-          src={asset("/hero-backdrop.png")}
-          alt="AI Concept of an Ocotillo Lakes dusk yard with lake light and desert planting. Not a completed project."
-          className="absolute inset-0 h-full w-full object-cover object-[center_40%]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-dusk via-dusk/55 to-dusk/15" />
-        <div className="relative z-10 mx-auto flex min-h-[min(88vh,760px)] max-w-6xl flex-col justify-end px-4 pb-10 pt-16 sm:px-6 sm:pb-14">
-          <p className="self-start rounded-full bg-dusk/55 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-gold backdrop-blur-sm">
-            AI Concept
-          </p>
-          <img
-            src={asset("/title-wordmark.png")}
-            alt="Ocotillo Yards"
-            width={720}
-            height={280}
-            className="mt-5 h-auto w-[min(100%,34rem)] drop-shadow-[0_12px_40px_rgba(28,42,38,0.55)]"
-          />
-          <h1 className="mt-5 max-w-2xl font-display text-4xl leading-tight text-paper sm:text-5xl">
-            See the yard before you hire the crew.
-          </h1>
-          <p className="mt-4 max-w-xl text-base leading-relaxed text-sand sm:text-lg">
-            Ocotillo Yards is a matchmaker, not a general contractor. A free two-view AI concept and idea board,
-            then an intro to a licensed local crew.
-          </p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <Link
-              href="/contact"
-              className="rounded-full bg-ocotillo px-5 py-2.5 text-sm font-medium text-paper shadow-sm transition hover:bg-adobe"
-            >
-              Request a free concept
-            </Link>
-            <Link
-              href="/contact?intent=crew"
-              className="rounded-full border border-sand/40 bg-dusk/40 px-5 py-2.5 text-sm text-paper backdrop-blur-sm hover:border-gold"
-            >
-              Licensed crews apply
-            </Link>
-          </div>
-          <p className="mt-4 text-[11px] uppercase tracking-[0.14em] text-sand/80">
-            Hero photograph is an AI Concept, not a finished job.
-          </p>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-        <p className="wordmark-yards text-adobe">The path</p>
-        <h2 className="mt-2 text-3xl text-dusk">Visualization first. Construction stays with licensees.</h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {steps.map((s) => (
-            <article key={s.n} className="stone-card rounded-2xl p-6">
-              <p className="font-display text-2xl italic text-ocotillo">{s.n}</p>
-              <h3 className="mt-2 text-xl text-dusk">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{s.body}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="bg-dusk text-paper">
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-2">
-          <div>
-            <p className="wordmark-yards text-bloom">Homeowners</p>
-            <h2 className="mt-2 text-3xl">Ocotillo Lakes lots, late light, honest pictures.</h2>
-            <p className="mt-4 text-sm leading-relaxed text-sand">
-              We visualize backyard, frontage, roof, and lake-lot edges so you can decide before anyone mobilizes.
-              We do not file with the Ocotillo Community Association Design Review Board — you and a licensed
-              contractor do, if the change needs it.
-            </p>
-            <Link href="/homeowners" className="mt-6 inline-block text-sm text-gold hover:underline">
-              For homeowners
-            </Link>
-          </div>
-          <div>
-            <p className="wordmark-yards text-palo">Licensed crews</p>
-            <h2 className="mt-2 text-3xl">Featured providers, not a bid mill.</h2>
-            <p className="mt-4 text-sm leading-relaxed text-sand">
-              Arizona ROC license required. We introduce homeowners who already have a concept in hand. We do not
-              take job payments or run your schedule.
-            </p>
-            <Link href="/contractors" className="mt-6 inline-block text-sm text-gold hover:underline">
-              For contractors
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-        <p className="wordmark-yards text-adobe">Work</p>
-        <h2 className="mt-2 text-3xl text-dusk">Labeled honestly. No invented reviews.</h2>
-        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">
-          Portfolio items use three labels only: AI Concept, Completed by Featured Provider, and Founding
-          Project—In Progress. We do not publish fake testimonials. Generated yard images stay on this homepage
-          as AI Concept, not as completed work.
+      <FilmStill
+        src={stills.hero.src}
+        alt={stills.hero.alt}
+        kicker="Ocotillo Lakes · Chandler"
+        title="See the yard before you hire the crew."
+        titleAs="h1"
+        height="screen"
+        veil="soft"
+        priority
+      >
+        <p className="mt-5 max-w-xl text-base leading-relaxed text-bone/85 sm:text-lg">
+          A matchmaker, not a general contractor. Two AI views of landscape, hardscape, or LED
+          lighting — then an intro to a licensed local crew if you want to build.
         </p>
-        <Link
-          href="/work"
-          className="mt-6 inline-flex rounded-full border border-stone px-5 py-2.5 text-sm text-dusk hover:border-adobe"
-        >
-          See the work
-        </Link>
+        <div className="mt-8 flex flex-wrap items-center gap-6">
+          <Cta href="/contact" variant="frame">
+            Request a free concept
+          </Cta>
+          <Cta href="/how-it-works">How it works</Cta>
+        </div>
+      </FilmStill>
+
+      <FilmStill
+        src={stills.lake.src}
+        alt={stills.lake.alt}
+        kicker="Homeowners"
+        title="Lake-lot edges, late light."
+      >
+        <p className="mt-5 max-w-lg text-sm leading-relaxed text-bone/85 sm:text-base">
+          Palms, a paver walk, lighting at the canal. See planting and hardscape before anyone
+          mobilizes. We visualize. You and a licensed contractor file with the Design Review
+          Board, if the change needs it.
+        </p>
+        <div className="mt-7">
+          <Cta href="/homeowners">For homeowners</Cta>
+        </div>
+      </FilmStill>
+
+      <FilmStill
+        src={stills.front.src}
+        alt={stills.front.alt}
+        kicker="Interior lots"
+        title="HOA character, not a fight."
+      >
+        <p className="mt-5 max-w-lg text-sm leading-relaxed text-bone/85 sm:text-base">
+          Frontage, side yards, and backyards that have to live with Ocotillo’s tile roofs,
+          palms, and HOA character. One idea. Two views. A board you can send to a spouse or a
+          contractor.
+        </p>
+      </FilmStill>
+
+      <section>
+        <BeforeAfter
+          beforeSrc={backyardPair.before.src}
+          afterSrc={backyardPair.after.src}
+          beforeAlt={backyardPair.before.alt}
+          afterAlt={backyardPair.after.alt}
+        />
+        <div className="mx-auto max-w-6xl px-5 py-12 sm:px-8">
+          <p className="kicker">Interior lot</p>
+          <h2 className="mt-3 max-w-2xl text-4xl text-bone sm:text-5xl">Same patio. One idea.</h2>
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-ash sm:text-base">
+            Same patio, same pool. Drag the line: tired water and a dirt yard on the left;
+            waterfall, paver path, planting, and LED lights on the right. Not a completed job,
+            and not a specific address.
+          </p>
+          <div className="mt-8">
+            <Cta href="/contact" variant="frame">
+              Request a free concept
+            </Cta>
+          </div>
+        </div>
+      </section>
+
+      <FilmStill
+        src={stills.lighting.src}
+        alt={stills.lighting.alt}
+        kicker="Hardscape and LED"
+        title="Pavers, planting, and LED."
+      >
+        <p className="mt-5 max-w-lg text-sm leading-relaxed text-bone/85 sm:text-base">
+          Landscape, hardscape, and low-voltage lighting so the family can react before a
+          licensed crew quotes.
+        </p>
+      </FilmStill>
+
+      <FilmStill
+        src={stills.side.src}
+        alt={stills.side.alt}
+        kicker="The path"
+        title="Visualization first. Construction stays with licensees."
+        veil="hard"
+      >
+        <ol className="mt-8 max-w-lg space-y-5 text-sm leading-relaxed text-bone/85">
+          <li>
+            <span className="kicker">Send the lot</span>
+            <p className="mt-1">Photos and a short note. No site visit required to start.</p>
+          </li>
+          <li>
+            <span className="kicker">Two views and a board</span>
+            <p className="mt-1">The same idea, twice, plus a page you can share.</p>
+          </li>
+          <li>
+            <span className="kicker">Meet a licensed crew</span>
+            <p className="mt-1">They quote, file, and construct. We do not.</p>
+          </li>
+        </ol>
+        <div className="mt-8">
+          <Cta href="/how-it-works">The whole path</Cta>
+        </div>
+      </FilmStill>
+
+      <section className="grid min-h-[70svh] md:grid-cols-2">
+        <div className="relative min-h-[50svh] overflow-hidden md:min-h-full">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={asset(stills.ocotillo.src)}
+            alt={stills.ocotillo.alt}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        </div>
+        <div className="flex flex-col justify-end bg-void px-5 py-16 sm:px-12">
+          <p className="kicker">Licensed crews</p>
+          <h2 className="mt-4 max-w-md text-4xl leading-tight text-bone sm:text-5xl">
+            Featured providers, not a bid mill.
+          </h2>
+          <p className="mt-5 max-w-md text-sm leading-relaxed text-ash">
+            Arizona ROC license required. We introduce homeowners who already have a concept in
+            hand. We do not take job payments or run your schedule.
+          </p>
+          <div className="mt-8">
+            <Cta href="/contractors">For contractors</Cta>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
+          <p className="kicker">Work</p>
+          <h2 className="mt-3 text-4xl text-bone sm:text-5xl">Labeled honestly.</h2>
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-ash">
+            AI Concept, Completed by Featured Provider, Founding Project—In Progress. No invented
+            reviews. Generated yards stay labeled.
+          </p>
+        </div>
+        <div className="grid gap-px bg-void md:grid-cols-3">
+          <StillLink
+            href="/work"
+            src={stills.lake.src}
+            alt={stills.lake.alt}
+            label="AI Concept"
+            title="Lake and golf"
+            className="aspect-[4/3]"
+          />
+          <StillLink
+            href="/work"
+            src={stills.front.src}
+            alt={stills.front.alt}
+            label="AI Concept"
+            title="Neighborhood street"
+            className="aspect-[4/3]"
+          />
+          <StillLink
+            href="/work"
+            src={stills.lighting.src}
+            alt={stills.lighting.alt}
+            label="AI Concept"
+            title="LED at the canal"
+            className="aspect-[4/3]"
+          />
+        </div>
+        <div className="mx-auto max-w-6xl px-5 py-12 sm:px-8">
+          <Cta href="/work">See the work</Cta>
+        </div>
       </section>
     </>
   );

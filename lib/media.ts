@@ -1,0 +1,50 @@
+export const EMAIL = "oclakesyards@gmail.com";
+
+export const stills = {
+  hero: {
+    src: "/stills/lake-canal-dusk.jpg",
+    alt: "Ocotillo Lakes, Chandler: clay-tile roofs, palms, and a man-made canal at dusk. Visualization based on this community. Not a completed job.",
+  },
+  lake: {
+    src: "/stills/lake-golf.jpg",
+    alt: "Ocotillo Lakes waterway with tile-roof homes, a footbridge, golf turf, and a small boat. Visualization based on this Chandler community. Not a completed job.",
+  },
+  front: {
+    src: "/stills/street.jpg",
+    alt: "An Ocotillo neighborhood street in Chandler: sidewalks, turf, clipped shrubs, palms, and tile roofs. Visualization based on this community. Not a completed job.",
+  },
+  lighting: {
+    src: "/stills/lake-lighting.jpg",
+    alt: "AI Concept of LED landscape lighting and a paver walk to a dock on an Ocotillo Lakes canal. Visualization, not a completed job.",
+  },
+  shade: {
+    src: "/stills/patio-cover.jpg",
+    alt: "From under a terracotta-tile patio cover toward an Ocotillo Lakes canal and dock. Visualization based on this community. Not a completed job.",
+  },
+  side: {
+    src: "/stills/entry-water.jpg",
+    alt: "Ocotillo community entry in Chandler: royal palms, lawn, waterfall pond, and annual color. Visualization based on this community. Not a completed job.",
+  },
+  ocotillo: {
+    src: "/stills/entry-water.jpg",
+    alt: "Ocotillo community landscaping in Chandler: palms, turf, and water. Visualization based on this community. Not a completed job.",
+  },
+} as const;
+
+export const backyardPair = {
+  before: {
+    src: "/stills/pair-before.jpg",
+    alt: "Before: a typical Ocotillo Lakes interior backyard with a tired stained pool, cracked deck, and dirt yard. Reconstruction of this house type, not a specific address.",
+  },
+  after: {
+    src: "/stills/pair-after.jpg",
+    alt: "After, AI Concept: the same pool with a rock waterfall, paver pathway, palo verde, planting, and LED path lights. Visualization, not a completed job.",
+  },
+} as const;
+
+export const nav = [
+  { href: "/how-it-works", label: "How it works" },
+  { href: "/homeowners", label: "Homeowners" },
+  { href: "/contractors", label: "Crews" },
+  { href: "/work", label: "Work" },
+] as const;

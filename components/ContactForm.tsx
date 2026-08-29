@@ -1,8 +1,7 @@
 "use client";
 
 import { FormEvent, useEffect, useMemo, useState } from "react";
-
-const EMAIL = "ocotilloyardsaz@gmail.com";
+import { EMAIL } from "@/lib/media";
 
 type Intent = "concept" | "crew";
 
@@ -15,7 +14,7 @@ export function ContactForm({ defaultIntent = "concept" }: { defaultIntent?: Int
   }, []);
   const [name, setName] = useState("");
   const [fromEmail, setFromEmail] = useState("");
-  const [focus, setFocus] = useState("Backyard");
+  const [focus, setFocus] = useState("Planting / landscape");
   const [roc, setRoc] = useState("");
   const [notes, setNotes] = useState("");
 
@@ -42,17 +41,17 @@ export function ContactForm({ defaultIntent = "concept" }: { defaultIntent?: Int
   }
 
   const field =
-    "mt-1 w-full rounded-lg border border-stone bg-paper px-3 py-2 text-ink outline-none ring-ocotillo/30 focus:ring-2";
+    "mt-2 w-full border-0 border-b border-bone/25 bg-transparent px-0 py-2 text-bone outline-none transition placeholder:text-ash/50 focus:border-ember";
   const chip = (active: boolean) =>
-    `rounded-full px-4 py-2 text-sm transition ${
-      active ? "bg-ocotillo text-paper" : "border border-stone text-dusk hover:border-adobe"
+    `border-b pb-1 font-caps text-[0.68rem] font-semibold uppercase tracking-[0.18em] transition ${
+      active ? "border-ember text-ember" : "border-transparent text-ash hover:text-bone"
     }`;
 
   return (
-    <form onSubmit={onSubmit} className="stone-card rounded-2xl p-6 sm:p-8">
-      <fieldset className="mb-6">
-        <legend className="wordmark-yards text-adobe">I am</legend>
-        <div className="mt-3 flex flex-wrap gap-2">
+    <form onSubmit={onSubmit}>
+      <fieldset className="mb-8">
+        <legend className="kicker">I am</legend>
+        <div className="mt-4 flex flex-wrap gap-6">
           <button type="button" className={chip(intent === "concept")} onClick={() => setIntent("concept")}>
             A homeowner requesting a free concept
           </button>
@@ -62,7 +61,7 @@ export function ContactForm({ defaultIntent = "concept" }: { defaultIntent?: Int
         </div>
       </fieldset>
 
-      <label className="block text-sm text-muted">
+      <label className="block text-xs uppercase tracking-[0.16em] text-ash">
         Name{intent === "crew" ? " / company" : ""}
         <input
           className={field}
@@ -73,7 +72,7 @@ export function ContactForm({ defaultIntent = "concept" }: { defaultIntent?: Int
         />
       </label>
 
-      <label className="mt-4 block text-sm text-muted">
+      <label className="mt-6 block text-xs uppercase tracking-[0.16em] text-ash">
         Email
         <input
           type="email"
@@ -86,18 +85,19 @@ export function ContactForm({ defaultIntent = "concept" }: { defaultIntent?: Int
       </label>
 
       {intent === "concept" ? (
-        <label className="mt-4 block text-sm text-muted">
+        <label className="mt-6 block text-xs uppercase tracking-[0.16em] text-ash">
           Focus
-          <select className={field} value={focus} onChange={(e) => setFocus(e.target.value)}>
-            <option>Backyard</option>
+          <select className={`${field} appearance-none bg-void`} value={focus} onChange={(e) => setFocus(e.target.value)}>
+            <option>Planting / landscape</option>
+            <option>Hardscape</option>
+            <option>LED lighting</option>
             <option>Front yard</option>
-            <option>Roof and shade</option>
             <option>Lake-lot edge</option>
             <option>Whole lot</option>
           </select>
         </label>
       ) : (
-        <label className="mt-4 block text-sm text-muted">
+        <label className="mt-6 block text-xs uppercase tracking-[0.16em] text-ash">
           Arizona ROC number
           <input
             className={field}
@@ -109,33 +109,34 @@ export function ContactForm({ defaultIntent = "concept" }: { defaultIntent?: Int
         </label>
       )}
 
-      <label className="mt-4 block text-sm text-muted">
+      <label className="mt-6 block text-xs uppercase tracking-[0.16em] text-ash">
         Notes
         <textarea
-          className={`${field} min-h-28`}
+          className={`${field} min-h-28 resize-y`}
           value={notes}
           onChange={(e) => setNotes(e.target.value)}
           placeholder={
             intent === "concept"
-              ? "Lake-lot or interior lot, photos you can attach in the email, and what you want to see."
+              ? "Lake-lot or interior lot, photos you can attach, and whether you want planting, hardscape, or lighting."
               : "Trades, Ocotillo Lakes experience, and insurance."
           }
         />
       </label>
 
-      <p className="mt-4 text-xs leading-relaxed text-muted">
-        This opens your email app to {EMAIL}. Nothing is stored on a server. We do not quote construction or collect
-        job payments.
+      <p className="mt-5 text-xs leading-relaxed text-ash/80">
+        This opens your email app to {EMAIL}. Nothing is stored on a server. We do not quote
+        construction or collect job payments.
       </p>
 
-      <div className="mt-6 flex flex-wrap items-center gap-4">
+      <div className="mt-8 flex flex-wrap items-center gap-6">
         <button
           type="submit"
-          className="inline-flex rounded-full bg-ocotillo px-5 py-2.5 text-sm font-medium text-paper shadow-sm transition hover:bg-adobe"
+          className="inline-flex items-center gap-3 border border-bone/80 px-5 py-3 font-caps text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-bone transition hover:border-ember hover:text-ember"
         >
           {intent === "concept" ? "Open email for a free concept" : "Open email to apply"}
+          <span aria-hidden>→</span>
         </button>
-        <a href={`mailto:${EMAIL}`} className="text-sm text-lake underline-offset-4 hover:underline">
+        <a href={`mailto:${EMAIL}`} className="text-sm text-ash underline-offset-4 hover:text-ember hover:underline">
           Or write {EMAIL} directly
         </a>
       </div>
