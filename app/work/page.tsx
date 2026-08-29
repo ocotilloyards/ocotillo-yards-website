@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "Work",
@@ -20,7 +21,7 @@ const slots: Slot[] = [
   {
     id: "concept-lake",
     label: "AI Concept",
-    src: "/work/ai-concept-lake-lot.png",
+    src: asset("/work/ai-concept-lake-lot.png"),
     alt: "AI Concept of an Ocotillo Lakes dusk backyard facing the lake, with desert planting and uplighting. Not a completed job.",
     title: "Lake-lot backyard, late light",
     caption: "Two-view study of a lake-edge lot. Generated visualization, not a photograph of finished work.",
@@ -28,7 +29,7 @@ const slots: Slot[] = [
   {
     id: "concept-front",
     label: "AI Concept",
-    src: "/work/ai-concept-front-xeri.png",
+    src: asset("/work/ai-concept-front-xeri.png"),
     alt: "AI Concept of a Chandler front xeriscape with palo verde, boulders, and decomposed granite. Not a completed job.",
     title: "Front xeriscape, morning sun",
     caption: "Street-side desert planting with no lawn. Generated visualization, not a contractor portfolio shot.",
@@ -36,7 +37,7 @@ const slots: Slot[] = [
   {
     id: "concept-pool",
     label: "AI Concept",
-    src: "/work/ai-concept-pool-deck.png",
+    src: asset("/work/ai-concept-pool-deck.png"),
     alt: "AI Concept of a Chandler pool deck with desert planters and late-afternoon light. Not a completed job.",
     title: "Pool deck and desert beds",
     caption: "Cool-deck and planting idea around an existing pool. Generated visualization, not a completed install.",
