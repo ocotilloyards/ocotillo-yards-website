@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { asset } from "@/lib/base-path";
 
 const steps = [
   {
@@ -23,25 +23,21 @@ export default function HomePage() {
   return (
     <>
       <section className="relative min-h-[min(88vh,760px)] overflow-hidden">
-        <Image
-          src="/hero-backdrop.png"
+        <img
+          src={asset("/hero-backdrop.png")}
           alt="AI Concept of an Ocotillo Lakes dusk yard with lake light and desert planting. Not a completed project."
-          fill
-          priority
-          className="object-cover object-[center_40%]"
-          sizes="100vw"
+          className="absolute inset-0 h-full w-full object-cover object-[center_40%]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-dusk via-dusk/55 to-dusk/15" />
         <div className="relative z-10 mx-auto flex min-h-[min(88vh,760px)] max-w-6xl flex-col justify-end px-4 pb-10 pt-16 sm:px-6 sm:pb-14">
           <p className="self-start rounded-full bg-dusk/55 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-gold backdrop-blur-sm">
             AI Concept
           </p>
-          <Image
-            src="/title-wordmark.png"
+          <img
+            src={asset("/title-wordmark.png")}
             alt="Ocotillo Yards"
             width={720}
             height={280}
-            priority
             className="mt-5 h-auto w-[min(100%,34rem)] drop-shadow-[0_12px_40px_rgba(28,42,38,0.55)]"
           />
           <h1 className="mt-5 max-w-2xl font-display text-4xl leading-tight text-paper sm:text-5xl">

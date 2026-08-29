@@ -19,13 +19,14 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ocotilloyards.github.io/ocotillo-yards-website"),
   title: {
     default: "Ocotillo Yards — Chandler visualization & licensed crew intro",
     template: "%s · Ocotillo Yards",
   },
   description:
     "Visualization and referral for Chandler’s Ocotillo Lakes. Free two-view AI backyard, roof, and landscape concepts plus a one-page idea board, then an introduction to a licensed local crew. Not a licensed contractor.",
-  icons: { icon: "/favicon.svg" },
+  icons: { icon: "/ocotillo-yards-website/favicon.svg" },
   openGraph: {
     title: "Ocotillo Yards",
     description:
