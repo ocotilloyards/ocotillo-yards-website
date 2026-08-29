@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { asset } from "@/lib/asset";
 
 const steps = [
   {
@@ -24,7 +25,7 @@ export default function HomePage() {
     <>
       <section className="relative min-h-[min(88vh,760px)] overflow-hidden">
         <Image
-          src="/hero-backdrop.png"
+          src={asset("/hero-backdrop.png")}
           alt="AI Concept of an Ocotillo Lakes dusk yard with lake light and desert planting. Not a completed project."
           fill
           priority
@@ -37,7 +38,7 @@ export default function HomePage() {
             AI Concept
           </p>
           <Image
-            src="/title-wordmark.png"
+            src={asset("/title-wordmark.png")}
             alt="Ocotillo Yards"
             width={720}
             height={280}
