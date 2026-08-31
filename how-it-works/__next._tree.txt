@@ -1,0 +1,11 @@
+:HL["/ocotillo-yards-website/_next/static/chunks/1kx5cjxes532r.css","style"]
+:HL["/ocotillo-yards-website/_next/static/media/01e4147cff8141ee-s.p.3huc2loe0ie8a.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/ocotillo-yards-website/_next/static/media/1b99372b3eaef0c8-s.p.1gsd1jahc5dg_.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/ocotillo-yards-website/_next/static/media/303804218d80822e-s.p.3lj349bs9hfu1.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/ocotillo-yards-website/_next/static/media/612838607db3d51d-s.p.2-6hkzwn24m5-.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/ocotillo-yards-website/_next/static/media/8bd76523131fa0fc-s.p.1pvupmngxrt5z.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/ocotillo-yards-website/stills/lake-canal-dusk.jpg","image",{"fetchPriority":"high"}]
+:HL["/ocotillo-yards-website/stills/street.jpg","image"]
+:HL["/ocotillo-yards-website/stills/lake-golf.jpg","image"]
+:HL["/ocotillo-yards-website/stills/lake-lighting.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"how-it-works","param":null,"prefetchHints":4160,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"cgTLIjHYfLb1bjZKtBA9R"}

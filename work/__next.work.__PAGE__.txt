@@ -1,0 +1,34 @@
+1:"$Sreact.fragment"
+2:I[737,["/ocotillo-yards-website/_next/static/chunks/0xx9h4-zw8uf-.js","/ocotillo-yards-website/_next/static/chunks/1pf6rh1kd0hft.js"],"BeforeAfter"]
+3:I[49020,["/ocotillo-yards-website/_next/static/chunks/0xx9h4-zw8uf-.js","/ocotillo-yards-website/_next/static/chunks/1pf6rh1kd0hft.js"],"WorkGallery"]
+4:I[22016,["/ocotillo-yards-website/_next/static/chunks/0xx9h4-zw8uf-.js","/ocotillo-yards-website/_next/static/chunks/1pf6rh1kd0hft.js"],""]
+5:I[97367,["/ocotillo-yards-website/_next/static/chunks/0xx9h4-zw8uf-.js"],"OutletBoundary"]
+6:"$Sreact.suspense"
+a:I[97367,["/ocotillo-yards-website/_next/static/chunks/0xx9h4-zw8uf-.js"],"ViewportBoundary"]
+b:I[97367,["/ocotillo-yards-website/_next/static/chunks/0xx9h4-zw8uf-.js"],"MetadataBoundary"]
+9:X
+19:X
+19:C
+0:{"buildId":"cgTLIjHYfLb1bjZKtBA9R","data":[{"rsc":["$","$1","c",{"children":[[["$","section",null,{"className":"mx-auto max-w-6xl px-5 pb-10 pt-28 sm:px-8","children":[["$","p",null,{"className":"kicker","children":"Proof"}],["$","h1",null,{"className":"mt-4 max-w-2xl text-4xl text-bone sm:text-6xl","children":"Work, labeled."}],["$","p",null,{"className":"mt-5 max-w-xl text-sm leading-relaxed text-ash sm:text-base","children":"Generated yards are AI Concept. Completed by Featured Provider and Founding Project—In Progress frames stay empty until a licensed partner says yes. No fake testimonials. Street and phone stay off this page. Ocotillo Yards is not a contractor."}]]}],["$","$L2",null,{"beforeSrc":"/stills/pair-before.jpg","afterSrc":"/stills/pair-after.jpg","beforeAlt":"Before / not a completed install: a typical Ocotillo Lakes interior backyard with a tired stained pool, cracked deck, and dirt yard. Reconstruction of this house type, not a specific address.","afterAlt":"After, AI concept: the same pool with a rock waterfall, paver pathway, palo verde, planting, and LED path lights. Visualization, not a completed job."}],["$","div",null,{"className":"mx-auto max-w-6xl px-5 py-10 sm:px-8","children":[["$","p",null,{"className":"kicker","children":"Interior lot · two views"}],["$","h2",null,{"className":"mt-3 text-3xl text-bone sm:text-4xl","children":"Typical Pulte backyard, before and after."}],["$","p",null,{"className":"mt-3 max-w-xl text-sm leading-relaxed text-ash","children":"Same camera, same pool. Left is tired water and a dirt yard. Right is an AI Concept — waterfall, paver path, palo verde, planting, and LED lights. Not a completed job, and not a specific address."}]]}],["$","$L3",null,{}],["$","div",null,{"className":"mx-auto max-w-6xl px-5 py-16 sm:px-8","children":["$","$L4",null,{"href":"/contact","className":"inline-flex items-center gap-3 border border-bone/80 px-5 py-3 font-caps text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-bone transition hover:border-ember hover:text-ember","children":["Request two views",["$","span",null,{"aria-hidden":true,"className":"translate-y-px","children":"→"}]]}]}]],[["$","script","script-0",{"src":"/ocotillo-yards-website/_next/static/chunks/1pf6rh1kd0hft.js","async":true}]],["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],"isPartial":"$@8","staleTime":"$9","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$La",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$Lb",null,{"children":["$","$6",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Ocotillo Lakes yard concepts and featured jobs"}],["$","meta","1",{"name":"description","content":"Ocotillo Lakes yard concepts and featured jobs in Chandler AZ. Every tile is labeled AI Concept, Completed by Featured Provider, or Founding Project—In Progress. Ocotillo Yards is not a contractor."}],["$","link","2",{"rel":"canonical","href":"https://ocotilloyards.github.io/ocotillo-yards-website/work/"}],["$","meta","3",{"property":"og:title","content":"Ocotillo Lakes yard concepts and featured jobs"}],["$","meta","4",{"property":"og:description","content":"Ocotillo Lakes yard concepts and featured jobs in Chandler AZ. Every tile is labeled AI Concept, Completed by Featured Provider, or Founding Project—In Progress. Ocotillo Yards is not a contractor."}],["$","meta","5",{"property":"og:url","content":"https://ocotilloyards.github.io/ocotillo-yards-website/work/"}],["$","meta","6",{"property":"og:site_name","content":"Ocotillo Yards"}],["$","meta","7",{"property":"og:locale","content":"en_US"}],["$","meta","8",{"property":"og:image","content":"https://ocotilloyards.github.io/ocotillo-yards-website/og/ocotillo-lakes-ai-concept.png"}],["$","meta","9",{"property":"og:image:width","content":"1200"}],"$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12","$L13","$L14"]}]}]}],"$L15"]}],"isPartial":"$@16","staleTime":"$9","varyParams":null},{"rsc":"$L17","isPartial":"$@18","staleTime":"$9","varyParams":"$19"}],"isUpgradeableISRFallback":false,"a":"$@1a","rootVaryParams":null,"needsRuntimeRequest":"$@1b"}
+1c:I[27201,["/ocotillo-yards-website/_next/static/chunks/0xx9h4-zw8uf-.js"],"IconMark"]
+1d:I[39756,["/ocotillo-yards-website/_next/static/chunks/0xx9h4-zw8uf-.js"],"default"]
+1e:I[37457,["/ocotillo-yards-website/_next/static/chunks/0xx9h4-zw8uf-.js"],"default"]
+7:null
+c:["$","meta","10",{"property":"og:image:height","content":"630"}]
+d:["$","meta","11",{"property":"og:image:alt","content":"AI concept of an Ocotillo Lakes backyard in Chandler AZ — visualization, not a completed job."}]
+e:["$","meta","12",{"property":"og:type","content":"website"}]
+f:["$","meta","13",{"name":"twitter:card","content":"summary_large_image"}]
+10:["$","meta","14",{"name":"twitter:title","content":"Ocotillo Lakes yard concepts and featured jobs"}]
+11:["$","meta","15",{"name":"twitter:description","content":"Ocotillo Lakes yard concepts and featured jobs in Chandler AZ. Every tile is labeled AI Concept, Completed by Featured Provider, or Founding Project—In Progress. Ocotillo Yards is not a contractor."}]
+12:["$","meta","16",{"name":"twitter:image","content":"https://ocotilloyards.github.io/ocotillo-yards-website/og/ocotillo-lakes-ai-concept.png"}]
+13:["$","link","17",{"rel":"icon","href":"/ocotillo-yards-website/favicon.svg"}]
+14:["$","$L1c","18",{}]
+15:["$","meta",null,{"name":"next-size-adjust","content":""}]
+17:["$","$1","c",{"children":[null,["$","$L1d",null,{"parallelRouterKey":"children","template":["$","$L1e",null,{}]}]]}]
+1b:true
+9:300
+9:C
+1a:0
+16:"$undefined"
+18:"$undefined"
+8:"$undefined"

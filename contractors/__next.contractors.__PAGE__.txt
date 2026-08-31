@@ -1,0 +1,39 @@
+1:"$Sreact.fragment"
+2:I[22016,["/ocotillo-yards-website/_next/static/chunks/0xx9h4-zw8uf-.js"],""]
+3:I[97367,["/ocotillo-yards-website/_next/static/chunks/0xx9h4-zw8uf-.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+8:I[97367,["/ocotillo-yards-website/_next/static/chunks/0xx9h4-zw8uf-.js"],"ViewportBoundary"]
+9:I[97367,["/ocotillo-yards-website/_next/static/chunks/0xx9h4-zw8uf-.js"],"MetadataBoundary"]
+:HL["/ocotillo-yards-website/stills/entry-water.jpg","image"]
+7:X
+1d:X
+1d:C
+0:{"buildId":"cgTLIjHYfLb1bjZKtBA9R","data":[{"rsc":["$","$1","c",{"children":[[["$","section",null,{"className":"grid min-h-svh md:grid-cols-2","children":[["$","div",null,{"className":"relative min-h-[55svh] overflow-hidden md:min-h-svh","children":[["$","img",null,{"src":"/ocotillo-yards-website/stills/entry-water.jpg","alt":"AI concept of Ocotillo community landscaping in Chandler: palms, turf, and water. Visualization based on this community. Not a completed job.","className":"absolute inset-0 h-full w-full object-cover"}],["$","p",null,{"className":"absolute bottom-6 left-6 font-caps text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-bone/80","children":"AI Concept · not a completed job"}]]}],["$","div",null,{"className":"flex flex-col justify-end px-5 py-24 sm:px-12","children":[["$","p",null,{"className":"kicker","children":"For contractors"}],["$","h1",null,{"className":"mt-4 max-w-lg text-4xl leading-[1.05] text-bone sm:text-6xl","children":"We intro the homeowner. You hold the license."}],["$","p",null,{"className":"mt-6 max-w-md text-sm leading-relaxed text-ash sm:text-base","children":"Homeowners see a free two-view concept first. When they want to build, we introduce a licensed local crew — not a bid mill, and not us pretending to be the GC. Ocotillo Yards is not a contractor."}],["$","div",null,{"className":"mt-10","children":["$","$L2",null,{"href":"/contact?intent=crew","className":"inline-flex items-center gap-3 border border-bone/80 px-5 py-3 font-caps text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-bone transition hover:border-ember hover:text-ember","children":["Apply with your ROC",["$","span",null,{"aria-hidden":true,"className":"translate-y-px","children":"→"}]]}]}]]}]]}],["$","section",null,{"className":"mx-auto grid max-w-6xl gap-14 px-5 py-20 sm:px-8 md:grid-cols-2","children":[["$","div",null,{"children":[["$","p",null,{"className":"kicker","children":"Who should apply"}],["$","ul",null,{"className":"mt-8 space-y-3 text-sm leading-relaxed text-ash","children":[["$","li",null,{"className":"flex gap-3","children":[["$","span",null,{"className":"mt-2 block h-px w-4 shrink-0 bg-ember","aria-hidden":true}],"Licensed Arizona contractors (ROC number required)"]}],["$","li",null,{"className":"flex gap-3","children":[["$","span",null,{"className":"mt-2 block h-px w-4 shrink-0 bg-ember","aria-hidden":true}],"Crews that already work Chandler / Ocotillo Lakes, or want to"]}],["$","li",null,{"className":"flex gap-3","children":[["$","span",null,{"className":"mt-2 block h-px w-4 shrink-0 bg-ember","aria-hidden":true}],"Hardscape, landscape, and LED lighting trades — not pool construction"]}]]}]]}],["$","div",null,{"children":[["$","p",null,{"className":"kicker","children":"What we will not do"}],["$","p",null,{"className":"mt-8 text-sm leading-relaxed text-ash","children":"We will not schedule your crew, quote your work as if it were ours, or collect job payments. You contract with the homeowner. You and the homeowner file HOA materials with the Ocotillo Community Association Design Review Board."}]]}]]}]],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":"$@6","staleTime":"$7","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L8",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L9",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Arizona ROC crews | Partner with Ocotillo Yards in Chandler"}],["$","meta","1",{"name":"description","content":"Licensed Arizona ROC crews: partner with Ocotillo Yards for Ocotillo Lakes homeowner intros in Chandler. We visualize. You hold the license. Ocotillo Yards is not a contractor."}],["$","link","2",{"rel":"canonical","href":"https://ocotilloyards.github.io/ocotillo-yards-website/contractors/"}],["$","meta","3",{"property":"og:title","content":"Arizona ROC crews | Partner with Ocotillo Yards in Chandler"}],"$La","$Lb","$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12","$L13","$L14","$L15","$L16","$L17","$L18"]}]}]}],"$L19"]}],"isPartial":"$@1a","staleTime":"$7","varyParams":null},{"rsc":"$L1b","isPartial":"$@1c","staleTime":"$7","varyParams":"$1d"}],"isUpgradeableISRFallback":false,"a":"$@1e","rootVaryParams":null,"needsRuntimeRequest":"$@1f"}
+20:I[27201,["/ocotillo-yards-website/_next/static/chunks/0xx9h4-zw8uf-.js"],"IconMark"]
+21:I[39756,["/ocotillo-yards-website/_next/static/chunks/0xx9h4-zw8uf-.js"],"default"]
+22:I[37457,["/ocotillo-yards-website/_next/static/chunks/0xx9h4-zw8uf-.js"],"default"]
+5:null
+a:["$","meta","4",{"property":"og:description","content":"Licensed Arizona ROC crews: partner with Ocotillo Yards for Ocotillo Lakes homeowner intros in Chandler. We visualize. You hold the license. Ocotillo Yards is not a contractor."}]
+b:["$","meta","5",{"property":"og:url","content":"https://ocotilloyards.github.io/ocotillo-yards-website/contractors/"}]
+c:["$","meta","6",{"property":"og:site_name","content":"Ocotillo Yards"}]
+d:["$","meta","7",{"property":"og:locale","content":"en_US"}]
+e:["$","meta","8",{"property":"og:image","content":"https://ocotilloyards.github.io/ocotillo-yards-website/og/ocotillo-lakes-ai-concept.png"}]
+f:["$","meta","9",{"property":"og:image:width","content":"1200"}]
+10:["$","meta","10",{"property":"og:image:height","content":"630"}]
+11:["$","meta","11",{"property":"og:image:alt","content":"AI concept of an Ocotillo Lakes backyard in Chandler AZ — visualization, not a completed job."}]
+12:["$","meta","12",{"property":"og:type","content":"website"}]
+13:["$","meta","13",{"name":"twitter:card","content":"summary_large_image"}]
+14:["$","meta","14",{"name":"twitter:title","content":"Arizona ROC crews | Partner with Ocotillo Yards in Chandler"}]
+15:["$","meta","15",{"name":"twitter:description","content":"Licensed Arizona ROC crews: partner with Ocotillo Yards for Ocotillo Lakes homeowner intros in Chandler. We visualize. You hold the license. Ocotillo Yards is not a contractor."}]
+16:["$","meta","16",{"name":"twitter:image","content":"https://ocotilloyards.github.io/ocotillo-yards-website/og/ocotillo-lakes-ai-concept.png"}]
+17:["$","link","17",{"rel":"icon","href":"/ocotillo-yards-website/favicon.svg"}]
+18:["$","$L20","18",{}]
+19:["$","meta",null,{"name":"next-size-adjust","content":""}]
+1b:["$","$1","c",{"children":[null,["$","$L21",null,{"parallelRouterKey":"children","template":["$","$L22",null,{}]}]]}]
+1f:true
+7:300
+7:C
+1e:0
+1a:"$undefined"
+1c:"$undefined"
+6:"$undefined"
