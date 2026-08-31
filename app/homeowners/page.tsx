@@ -1,18 +1,21 @@
-import type { Metadata } from "next";
 import { BeforeAfter } from "@/components/BeforeAfter";
 import { Cta } from "@/components/Cta";
+import { FaqJsonLd } from "@/components/FaqJsonLd";
+import { FaqList } from "@/components/FaqList";
 import { FilmStill } from "@/components/FilmStill";
 import { backyardPair, stills } from "@/lib/media";
+import { PAGE_DESCRIPTIONS, PAGE_TITLES, pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Homeowners",
-  description:
-    "Free AI concepts for landscape, hardscape, and LED lighting for Ocotillo Lakes homeowners in Chandler, Arizona, then an intro to a licensed crew.",
-};
+export const metadata = pageMeta({
+  title: PAGE_TITLES.homeowners,
+  description: PAGE_DESCRIPTIONS.homeowners,
+  path: "/homeowners/",
+});
 
 export default function HomeownersPage() {
   return (
     <>
+      <FaqJsonLd />
       <FilmStill
         src={stills.lake.src}
         alt={stills.lake.alt}
@@ -29,7 +32,7 @@ export default function HomeownersPage() {
         </p>
         <div className="mt-8">
           <Cta href="/contact" variant="frame">
-            Request a free concept
+            Request two views
           </Cta>
         </div>
       </FilmStill>
@@ -52,37 +55,41 @@ export default function HomeownersPage() {
       </section>
 
       <FilmStill
+        id="landscape"
         src={stills.front.src}
         alt={stills.front.alt}
-        kicker="Interior lots"
-        title="Backyards, side yards, frontage."
+        kicker="Landscape"
+        title="Planting that lives with HOA character."
       >
         <p className="mt-5 max-w-lg text-sm leading-relaxed text-bone/85 sm:text-base">
-          Lots that have to live with HOA character, not fight it. One idea. Two views.
+          Palms, turf, and desert planting for interior lots and lake-lot edges. We visualize.
+          We do not construct.
         </p>
       </FilmStill>
 
       <FilmStill
-        src={stills.side.src}
-        alt={stills.side.alt}
-        kicker="Lake-lot edges"
-        title="See the water before anyone mobilizes."
+        id="hardscape"
+        src={stills.shade.src}
+        alt={stills.shade.alt}
+        kicker="Hardscape"
+        title="Pavers, walks, and patio edges."
       >
         <p className="mt-5 max-w-lg text-sm leading-relaxed text-bone/85 sm:text-base">
-          Lawn to the water, a dock, palms, the canal — as a conversation starter, not a plan
-          set.
+          Hardscape as a picture you can share — not a bid, not a plan set. A licensed crew
+          quotes if you want to build.
         </p>
       </FilmStill>
 
       <FilmStill
+        id="led"
         src={stills.lighting.src}
         alt={stills.lighting.alt}
-        kicker="Hardscape and LED"
-        title="Hardscape and light at dusk."
+        kicker="LED"
+        title="Low-voltage light at dusk."
       >
         <p className="mt-5 max-w-lg text-sm leading-relaxed text-bone/85 sm:text-base">
-          Pavers, planting, and low-voltage lighting around the lot you already have. We
-          visualize. A licensed crew quotes.
+          Path lights and uplights around the lot you already have. We visualize. A licensed
+          crew quotes. We do not install.
         </p>
       </FilmStill>
 
@@ -104,10 +111,12 @@ export default function HomeownersPage() {
         </div>
         <div className="mt-12">
           <Cta href="/contact" variant="frame">
-            Request a free concept
+            Request two views
           </Cta>
         </div>
       </section>
+
+      <FaqList />
     </>
   );
 }

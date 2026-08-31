@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
 import { asset } from "@/lib/base-path";
 import { Cta } from "@/components/Cta";
 import { stills } from "@/lib/media";
+import { PAGE_DESCRIPTIONS, PAGE_TITLES, pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "For contractors",
-  description:
-    "Licensed Arizona crews serving Chandler and Ocotillo Lakes: apply with your ROC number. Ocotillo Yards intros homeowners; you perform the work.",
-};
+export const metadata = pageMeta({
+  title: PAGE_TITLES.contractors,
+  description: PAGE_DESCRIPTIONS.contractors,
+  path: "/contractors/",
+});
 
 export default function ContractorsPage() {
   return (
@@ -31,7 +31,8 @@ export default function ContractorsPage() {
           </h1>
           <p className="mt-6 max-w-md text-sm leading-relaxed text-ash sm:text-base">
             Homeowners see a free two-view concept first. When they want to build, we introduce a
-            licensed local crew — not a bid mill, and not us pretending to be the GC.
+            licensed local crew — not a bid mill, and not us pretending to be the GC. Ocotillo
+            Yards is not a contractor.
           </p>
           <div className="mt-10">
             <Cta href="/contact?intent=crew" variant="frame">

@@ -27,7 +27,7 @@ export function Header() {
             href="/contact"
             className="font-caps text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-ember transition hover:text-bone"
           >
-            Request a concept
+            Request two views
           </Link>
         </nav>
         <button
@@ -69,7 +69,7 @@ export function Header() {
                 className="font-caps text-sm font-semibold uppercase tracking-[0.22em] text-ember"
                 onClick={() => setOpen(false)}
               >
-                Request a concept
+                Request two views
               </Link>
             </li>
           </ul>

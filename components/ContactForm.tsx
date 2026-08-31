@@ -15,25 +15,31 @@ export function ContactForm({ defaultIntent = "concept" }: { defaultIntent?: Int
   const [name, setName] = useState("");
   const [fromEmail, setFromEmail] = useState("");
   const [focus, setFocus] = useState("Planting / landscape");
+  const [neighborhood, setNeighborhood] = useState("Ocotillo Lakes");
+  const [wantIntro, setWantIntro] = useState("N");
   const [roc, setRoc] = useState("");
   const [notes, setNotes] = useState("");
 
   const mailto = useMemo(() => {
     const subject =
       intent === "concept"
-        ? "Free concept request — Ocotillo Yards"
+        ? "Two-view request — Ocotillo Yards"
         : "Licensed crew application — Ocotillo Yards";
     const lines = [
-      `Intent: ${intent === "concept" ? "Homeowner concept request" : "Licensed crew application"}`,
+      `Intent: ${intent === "concept" ? "Homeowner two-view request" : "Licensed crew application"}`,
       `Name / company: ${name}`,
       `Email: ${fromEmail}`,
     ];
-    if (intent === "concept") lines.push(`Focus: ${focus}`);
+    if (intent === "concept") {
+      lines.push(`Focus: ${focus}`);
+      lines.push(`Neighborhood: ${neighborhood}`);
+      lines.push(`Intro to a licensed crew?: ${wantIntro}`);
+    }
     if (intent === "crew") lines.push(`Arizona ROC number: ${roc}`);
     if (notes) lines.push("", notes);
     const body = encodeURIComponent(lines.join("\n"));
     return `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${body}`;
-  }, [intent, name, fromEmail, focus, roc, notes]);
+  }, [intent, name, fromEmail, focus, neighborhood, wantIntro, roc, notes]);
 
   function onSubmit(e: FormEvent) {
     e.preventDefault();
@@ -53,7 +59,7 @@ export function ContactForm({ defaultIntent = "concept" }: { defaultIntent?: Int
         <legend className="kicker">I am</legend>
         <div className="mt-4 flex flex-wrap gap-6">
           <button type="button" className={chip(intent === "concept")} onClick={() => setIntent("concept")}>
-            A homeowner requesting a free concept
+            A homeowner requesting two views
           </button>
           <button type="button" className={chip(intent === "crew")} onClick={() => setIntent("crew")}>
             A licensed crew applying to be featured
@@ -85,17 +91,41 @@ export function ContactForm({ defaultIntent = "concept" }: { defaultIntent?: Int
       </label>
 
       {intent === "concept" ? (
-        <label className="mt-6 block text-xs uppercase tracking-[0.16em] text-ash">
-          Focus
-          <select className={`${field} appearance-none bg-void`} value={focus} onChange={(e) => setFocus(e.target.value)}>
-            <option>Planting / landscape</option>
-            <option>Hardscape</option>
-            <option>LED lighting</option>
-            <option>Front yard</option>
-            <option>Lake-lot edge</option>
-            <option>Whole lot</option>
-          </select>
-        </label>
+        <>
+          <label className="mt-6 block text-xs uppercase tracking-[0.16em] text-ash">
+            Focus
+            <select className={`${field} appearance-none bg-void`} value={focus} onChange={(e) => setFocus(e.target.value)}>
+              <option>Planting / landscape</option>
+              <option>Hardscape</option>
+              <option>LED lighting</option>
+              <option>Front yard</option>
+              <option>Lake-lot edge</option>
+              <option>Whole lot</option>
+            </select>
+          </label>
+          <label className="mt-6 block text-xs uppercase tracking-[0.16em] text-ash">
+            Neighborhood
+            <select
+              className={`${field} appearance-none bg-void`}
+              value={neighborhood}
+              onChange={(e) => setNeighborhood(e.target.value)}
+            >
+              <option>Ocotillo Lakes</option>
+              <option>Chandler other</option>
+            </select>
+          </label>
+          <fieldset className="mt-6">
+            <legend className="text-xs uppercase tracking-[0.16em] text-ash">Intro to a licensed crew?</legend>
+            <div className="mt-3 flex flex-wrap gap-6">
+              <button type="button" className={chip(wantIntro === "Y")} onClick={() => setWantIntro("Y")}>
+                Y
+              </button>
+              <button type="button" className={chip(wantIntro === "N")} onClick={() => setWantIntro("N")}>
+                N
+              </button>
+            </div>
+          </fieldset>
+        </>
       ) : (
         <label className="mt-6 block text-xs uppercase tracking-[0.16em] text-ash">
           Arizona ROC number
@@ -133,7 +163,7 @@ export function ContactForm({ defaultIntent = "concept" }: { defaultIntent?: Int
           type="submit"
           className="inline-flex items-center gap-3 border border-bone/80 px-5 py-3 font-caps text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-bone transition hover:border-ember hover:text-ember"
         >
-          {intent === "concept" ? "Open email for a free concept" : "Open email to apply"}
+          {intent === "concept" ? "Request two views" : "Ask about a crew intro"}
           <span aria-hidden>→</span>
         </button>
         <a href={`mailto:${EMAIL}`} className="text-sm text-ash underline-offset-4 hover:text-ember hover:underline">

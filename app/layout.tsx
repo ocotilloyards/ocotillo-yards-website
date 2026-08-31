@@ -3,6 +3,7 @@ import { Barlow_Condensed, Cormorant_Garamond, Outfit } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
+import { PAGE_DESCRIPTIONS, PAGE_TITLES, SITE_URL } from "@/lib/seo";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -27,21 +28,31 @@ const barlow = Barlow_Condensed({
   weight: ["500", "600"],
 });
 
+const ogImage = `${SITE_URL}/og/ocotillo-lakes-ai-concept.png`;
+const ogAlt =
+  "AI concept of an Ocotillo Lakes backyard in Chandler AZ — visualization, not a completed job.";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ocotilloyards.github.io/ocotillo-yards-website"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Ocotillo Yards — Chandler visualization & licensed crew intro",
+    default: PAGE_TITLES.home,
     template: "%s · Ocotillo Yards",
   },
-  description:
-    "Visualization and referral for Chandler’s Ocotillo Lakes. Free two-view AI concepts for landscape, hardscape, and LED lighting, plus a one-page idea board, then an introduction to a licensed local crew. Not a licensed contractor.",
+  description: PAGE_DESCRIPTIONS.home,
   icons: { icon: "/ocotillo-yards-website/favicon.svg" },
   openGraph: {
-    title: "Ocotillo Yards",
-    description:
-      "Matchmaker, not a GC. Free two-view AI concept for landscape, hardscape, and lighting in Ocotillo Lakes, then a licensed crew intro.",
+    title: PAGE_TITLES.home,
+    description: PAGE_DESCRIPTIONS.home,
     locale: "en_US",
     type: "website",
+    siteName: "Ocotillo Yards",
+    images: [{ url: ogImage, width: 1200, height: 630, alt: ogAlt }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: PAGE_TITLES.home,
+    description: PAGE_DESCRIPTIONS.home,
+    images: [ogImage],
   },
 };
 

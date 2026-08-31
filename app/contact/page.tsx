@@ -1,17 +1,19 @@
-import type { Metadata } from "next";
 import { asset } from "@/lib/base-path";
 import { ContactForm } from "@/components/ContactForm";
+import { ContactJsonLd } from "@/components/ContactJsonLd";
 import { EMAIL, stills } from "@/lib/media";
+import { PAGE_DESCRIPTIONS, PAGE_TITLES, pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Request a concept",
-  description:
-    "Request a free two-view AI concept from Ocotillo Yards, or apply as a licensed Arizona crew with your ROC number. Email ocotilloyardsaz@gmail.com.",
-};
+export const metadata = pageMeta({
+  title: PAGE_TITLES.contact,
+  description: PAGE_DESCRIPTIONS.contact,
+  path: "/contact/",
+});
 
 export default function ContactPage() {
   return (
     <article className="grid min-h-svh md:grid-cols-2">
+      <ContactJsonLd />
       <div className="relative min-h-[42svh] overflow-hidden md:min-h-svh">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -26,14 +28,14 @@ export default function ContactPage() {
       </div>
       <div className="flex flex-col justify-center px-5 py-28 sm:px-12">
         <p className="kicker">Contact</p>
-        <h1 className="mt-4 text-4xl text-bone sm:text-6xl">Request a free concept.</h1>
+        <h1 className="mt-4 text-4xl text-bone sm:text-6xl">Request two views.</h1>
         <p className="mt-5 max-w-md text-sm leading-relaxed text-ash sm:text-base">
           Email is the public door:{" "}
           <a className="text-bone underline decoration-ash/50 underline-offset-4 hover:text-ember" href={`mailto:${EMAIL}`}>
             {EMAIL}
           </a>
           . Use the form to open a message, or write us directly. Licensed crews: include your ROC
-          number.
+          number. Ocotillo Yards is not a contractor.
         </p>
         <div className="mt-10 max-w-lg">
           <ContactForm />

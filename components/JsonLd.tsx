@@ -1,28 +1,52 @@
-const EMAIL = "ocotilloyardsaz@gmail.com";
+import { CONTACT_EMAIL, NEXTDOOR_URL, SITE_URL } from "@/lib/seo";
 
 export function JsonLd() {
   const data = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: "Ocotillo Yards",
-    description:
-      "Visualization and referral service in Chandler, Arizona. Free two-view AI concepts for landscape, hardscape, and LED lighting, plus a one-page idea board, then an introduction to a licensed local crew. Not a licensed contractor.",
-    email: EMAIL,
-    areaServed: {
-      "@type": "Place",
-      name: "Ocotillo Lakes",
-      containedInPlace: {
-        "@type": "City",
-        name: "Chandler",
-        containedInPlace: { "@type": "State", name: "Arizona" },
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": `${SITE_URL}/#organization`,
+        name: "Ocotillo Yards",
+        url: SITE_URL,
+        email: CONTACT_EMAIL,
+        description:
+          "Yard visualization and licensed-contractor introduction for Ocotillo Lakes in Chandler, Arizona. Ocotillo Yards is not a contractor.",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Chandler",
+          addressRegion: "AZ",
+          addressCountry: "US",
+        },
+        areaServed: [
+          {
+            "@type": "City",
+            name: "Chandler",
+            containedInPlace: { "@type": "State", name: "Arizona" },
+          },
+          { "@type": "Place", name: "Ocotillo Lakes" },
+        ],
+        sameAs: [NEXTDOOR_URL],
       },
-    },
-    knowsAbout: [
-      "AI landscape visualization",
-      "hardscape visualization",
-      "LED landscape lighting visualization",
-      "Ocotillo Community Association Design Review Board",
-      "licensed contractor referral",
+      {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        name: "Ocotillo Yards",
+        url: SITE_URL,
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        inLanguage: "en-US",
+      },
+      {
+        "@type": "Service",
+        "@id": `${SITE_URL}/#service`,
+        name: "Ocotillo Yards visualization",
+        serviceType: "Yard visualization and licensed-contractor introduction.",
+        provider: { "@id": `${SITE_URL}/#organization` },
+        areaServed: [
+          { "@type": "City", name: "Chandler AZ" },
+          { "@type": "Place", name: "Ocotillo Lakes" },
+        ],
+      },
     ],
   };
 

@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://ocotilloyards.github.io/ocotillo-yards-website/sitemap.xml

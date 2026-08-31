@@ -10,6 +10,7 @@ const heights: Record<Height, string> = {
 };
 
 export function FilmStill({
+  id,
   src,
   alt,
   kicker,
@@ -21,6 +22,7 @@ export function FilmStill({
   priority = false,
   children,
 }: {
+  id?: string;
   src: string;
   alt: string;
   kicker?: string;
@@ -33,7 +35,10 @@ export function FilmStill({
   children?: ReactNode;
 }) {
   return (
-    <section className={`relative flex ${heights[height]} flex-col justify-end overflow-hidden`}>
+    <section
+      id={id}
+      className={`relative flex ${heights[height]} flex-col justify-end overflow-hidden${id ? " scroll-mt-24" : ""}`}
+    >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={asset(src)}
