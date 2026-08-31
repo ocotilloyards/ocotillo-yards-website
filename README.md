@@ -4,7 +4,7 @@ Marketing site for **Ocotillo Yards** — a visualization and referral matchmake
 
 We are **not** a general contractor. Licensed partners perform construction. We do not write plans, file HOA packets, quote construction, schedule crews, or collect job payments.
 
-Public contact: [ocotilloyardsaz@gmail.com](mailto:ocotilloyardsaz@gmail.com)
+Public contact: [oclakesyards@gmail.com](mailto:oclakesyards@gmail.com)
 
 ## Pages
 
@@ -13,7 +13,7 @@ Public contact: [ocotilloyardsaz@gmail.com](mailto:ocotilloyardsaz@gmail.com)
 - `/homeowners` — Homeowners
 - `/contractors` — For contractors
 - `/work` — Work / proof (labeled placeholders)
-- `/contact` — Request a free concept, or licensed crews apply (ROC required)
+- `/contact` — Request two views, or licensed crews apply (ROC required)
 
 ## Run locally
 

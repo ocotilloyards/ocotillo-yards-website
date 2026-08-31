@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { EMAIL, nav } from "@/lib/media";
+import { NEXTDOOR_URL } from "@/lib/seo";
 import { Wordmark } from "./Wordmark";
 
 export function Footer() {
@@ -11,6 +12,11 @@ export function Footer() {
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-ash">
             Visualization and referral for Chandler&apos;s Ocotillo Lakes. Landscape, hardscape,
             and LED lighting — then an intro to a licensed local crew.
+          </p>
+          <p className="mt-4 text-sm">
+            <Link href="/how-it-works" className="text-bone/85 hover:text-ember">
+              Not a contractor
+            </Link>
           </p>
         </div>
         <div>
@@ -25,7 +31,7 @@ export function Footer() {
             ))}
             <li>
               <Link href="/contact" className="text-bone/85 hover:text-ember">
-                Request a concept
+                Request two views
               </Link>
             </li>
           </ul>
@@ -35,6 +41,16 @@ export function Footer() {
           <p className="mt-4 text-sm">
             <a href={`mailto:${EMAIL}`} className="hover:text-ember">
               {EMAIL}
+            </a>
+          </p>
+          <p className="mt-2 text-sm">
+            <a
+              href={NEXTDOOR_URL}
+              className="text-bone/85 hover:text-ember"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Nextdoor
             </a>
           </p>
           <p className="mt-2 text-sm text-ash">Chandler, Arizona · Ocotillo Lakes</p>

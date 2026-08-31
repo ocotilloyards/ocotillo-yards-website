@@ -1,9 +1,23 @@
+import Link from "next/link";
 import { BeforeAfter } from "@/components/BeforeAfter";
 import { Cta } from "@/components/Cta";
 import { FilmStill } from "@/components/FilmStill";
 import { StillLink } from "@/components/StillLink";
 import { asset } from "@/lib/base-path";
 import { backyardPair, stills } from "@/lib/media";
+import { PAGE_DESCRIPTIONS, PAGE_TITLES, pageMeta } from "@/lib/seo";
+
+export const metadata = pageMeta({
+  title: PAGE_TITLES.home,
+  description: PAGE_DESCRIPTIONS.home,
+  path: "/",
+});
+
+const chips = [
+  { href: "/homeowners/#landscape", label: "Landscape" },
+  { href: "/homeowners/#hardscape", label: "Hardscape" },
+  { href: "/homeowners/#led", label: "LED" },
+] as const;
 
 export default function HomePage() {
   return (
@@ -12,23 +26,41 @@ export default function HomePage() {
         src={stills.hero.src}
         alt={stills.hero.alt}
         kicker="Ocotillo Lakes · Chandler"
-        title="See the yard before you hire the crew."
+        title="See the yard first. Meet an Arizona ROC crew second."
         titleAs="h1"
         height="screen"
         veil="soft"
         priority
       >
         <p className="mt-5 max-w-xl text-base leading-relaxed text-bone/85 sm:text-lg">
-          A matchmaker, not a general contractor. Two AI views of landscape, hardscape, or LED
-          lighting — then an intro to a licensed local crew if you want to build.
+          Free two-view AI concepts for Ocotillo Lakes homes in Chandler — landscape, hardscape,
+          LED. We do not build.
         </p>
         <div className="mt-8 flex flex-wrap items-center gap-6">
           <Cta href="/contact" variant="frame">
-            Request a free concept
+            Request two views
           </Cta>
           <Cta href="/how-it-works">How it works</Cta>
         </div>
+        <div className="mt-8 flex flex-wrap gap-5">
+          {chips.map((chip) => (
+            <Link
+              key={chip.href}
+              href={chip.href}
+              className="border-b border-bone/40 pb-1 font-caps text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-bone/85 transition hover:border-ember hover:text-ember"
+            >
+              {chip.label}
+            </Link>
+          ))}
+        </div>
       </FilmStill>
+
+      <section className="border-y border-bone/10 bg-void-2">
+        <p className="mx-auto max-w-6xl px-5 py-4 font-caps text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-ash sm:px-8">
+          Not a GC · No ROC of our own · We do not quote, collect, or install · Featured work is
+          labeled
+        </p>
+      </section>
 
       <FilmStill
         src={stills.lake.src}
@@ -76,7 +108,7 @@ export default function HomePage() {
           </p>
           <div className="mt-8">
             <Cta href="/contact" variant="frame">
-              Request a free concept
+              Request two views
             </Cta>
           </div>
         </div>
